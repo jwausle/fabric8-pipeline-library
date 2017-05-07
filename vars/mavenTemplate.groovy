@@ -11,7 +11,7 @@ def call(Map parameters = [:], body) {
 
     def flow = new io.fabric8.Fabric8Commands()
 
-    if (flow.isOpenShift()) {
+    if (false) {
         podTemplate(label: label, inheritFrom: "${inheritFrom}",
                 containers: [
                         [name: 'maven', image: "${mavenImage}", command: 'cat', ttyEnabled: true,
